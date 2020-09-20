@@ -15,7 +15,7 @@ const Toolbar=(props)=>{
                         <li className="navigation_item_op"><a href="/">Option 1</a></li>
                         <li className="navigation_item_op"><a href="/">Option 2</a></li>
                         <li><a href="/">Log In</a></li>
-                        <li><button className="signup_button"><a href="/">Sign Up</a></button></li>
+                        <li><button className="signup_button"><a href="/form">Sign Up</a></button></li>
                     </ul>
                 </div>
             </nav>
