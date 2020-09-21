@@ -119,12 +119,12 @@ const form=props=>{
                                 />
                             </FormControl>
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid container style={{justifyContent:"space-around",margin:"10px"}}>
                         <TextareaAutosize 
                         color="primary" 
                         variant="outlined" 
-                        cols={175} 
-                        rows={25} 
+                        cols={190} 
+                        rows={15} 
                         placeholder="Your Message"
                         style={{border:"1px solid #D0D0D0",borderRadius:"0.5rem",resize:"none"}}/>
                     </Grid>

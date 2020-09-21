@@ -1,13 +1,27 @@
 import React from 'react';
-import './HomePage.css'
+import Card from './Cards';
+import {Paper,Grid} from '@material-ui/core';
 
-class Home extends React.Component{
+
+
+class HomePage extends React.Component{
     render(){
         return(
-            <div>
-                Hello
+            <div >
+                <Paper style={{margin:"80px",padding:"24px"}}>
+                    <Grid container style={{justifyContent:"space-around"}}>
+                        <Card/> 
+                        <Card/>
+                        <Card/>
+                        <Card/>
+                        <Card/>
+                        <Card/>
+                        <Card/>
+                    </Grid>
+                </Paper>
             </div>
-        )
+        );
     }
 }
-export default Home;
+
+export default HomePage;
