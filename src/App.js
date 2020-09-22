@@ -33,7 +33,7 @@ class App extends React.Component{
                 {backDrop}
                 <main className='main_content'>
                     <Switch>
-                        <Route exact path={'/form'} component={Form}></Route>
+                        <Route path={'/form'} component={Form}></Route>
                         <Route path={'/'} component={Home}></Route>
                     </Switch>
                 </main>
