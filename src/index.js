@@ -6,7 +6,7 @@ import {BrowserRouter} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
 const app=(
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={'http://frontwork.surge.sh'}>
         <App/>
     </BrowserRouter>
 );
