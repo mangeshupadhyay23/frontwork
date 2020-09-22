@@ -9,14 +9,14 @@ const Toolbar=(props)=>{
         <header className="toolbar">
             <nav className="toolbar_navigation">
                 <div><DrawerToggleButton click={props.drawerToggler}/></div>
-                <div className="toolbar_logo"><a href="/">THE LOGO</a></div>
+                <div className="toolbar_logo"><NavLink to="/" exact>THE LOGO</NavLink></div>
                 <div className="space"></div>
                 <div className="toolbar_navigation-items">
                     <ul>
-                        <li className="navigation_item_op"><a href="/">Option 1</a></li>
-                        <li className="navigation_item_op"><a href="/">Option 2</a></li>
-                        <li><a href="/">Log In</a></li>
-                        <li><button className="signup_button"><NavLink to="/form/" exact>Sign Up</NavLink> </button></li>
+                        <li className="navigation_item_op"><NavLink to="/" exact>Option 1</NavLink></li>
+                        <li className="navigation_item_op"><NavLink to="/" exact>Option 2</NavLink></li>
+                        <li><NavLink to="/" exact>Log In</NavLink></li>
+                        <li><button className="signup_button"><NavLink to="/form/" exact>Sign Up</NavLink></button></li>
                     </ul>
                 </div>
             </nav>
