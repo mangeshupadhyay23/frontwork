@@ -35,7 +35,7 @@ class App extends React.Component{
                 <main className='main_content'>
                     <Switch>
                         <Route exact path={'/'} component={Home}></Route>
-                        <Route path={process.env.PUBLIC_URL+'/form'} component={Form}></Route>
+                        <Route path={'/form/'} component={Form}></Route>
                     </Switch>
                 </main>
             </div> 

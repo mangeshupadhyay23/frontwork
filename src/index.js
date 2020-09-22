@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 
 const app=(
     
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter >
         <App/>
     </BrowserRouter>
 );
