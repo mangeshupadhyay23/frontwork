@@ -26,6 +26,7 @@ class App extends React.Component{
           backDrop=<BackDrop drawerToggler={this.drawerToggleHandler}/>
       }
       
+      
         return (
              <div className="App" style={{height:"100%"}}>
                 <Toolbar drawerToggler={this.drawerToggleHandler}/>
@@ -34,7 +35,7 @@ class App extends React.Component{
                 <main className='main_content'>
                     <Switch>
                         <Route exact path={'/'} component={Home}></Route>
-                        <Route path={'/form'} component={Form}></Route>
+                        <Route path={process.env.PUBLIC_URL+'/form'} component={Form}></Route>
                     </Switch>
                 </main>
             </div> 
