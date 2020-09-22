@@ -14,9 +14,12 @@
     "@testing-library/user-event": "^7.2.1",
     "contentful": "^7.14.6",
     "font-awesome": "^4.7.0",
+    "material-ui-phone-number": "^2.2.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-material-ui-form-validator": "^2.1.1",
+    "react-phone-input-2": "^2.13.8",
+    "react-phone-number-input": "^3.0.25",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"

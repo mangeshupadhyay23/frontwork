@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Grid,Paper, FormControl, FormLabel, RadioGroup ,FormControlLabel,Radio, Select, MenuItem,Checkbox,TextareaAutosize,Button} from '@material-ui/core';
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
+import MuiPhoneNumber from 'material-ui-phone-number';
 import './Form.css';
 
 
@@ -15,7 +16,7 @@ const initialValues={
     city:"",
     gender:"male",
     dob:new Date(),
-    isUser:false,
+    isUser:true,
 }
 
 
@@ -31,10 +32,26 @@ const form=props=>{
             [name]:value
         })
     }
+    const handleNumberChange=e=>{
+        const {name,value}={name:'mobile',value:document.getElementById('phoneNumber').value}
+        document.getElementById('phoneNumber').style.background="none"
+        setValues({
+            ...values,
+            [name]:value
+        })
+    }
+    const phoneLengthChecker=()=>{
+        console.log(document.getElementById('phoneNumber').value.length);
+        if(document.getElementById('phoneNumber').value.length===15){
+            window.location.reload();
+        }else{
+            document.getElementById('phoneNumber').style.background="rgba(243, 175, 175,0.3)"
+        }
+    }
     
     return(
         <Paper style={{margin:"80px",padding:"24px"}}>
-            <ValidatorForm autoComplete="off">
+            <ValidatorForm autoComplete="off" onSubmit={phoneLengthChecker}>
                 <Grid container>
                     <Grid item xs={6}>
                         <TextValidator
@@ -90,19 +107,29 @@ const form=props=>{
                         </FormControl>
                     </Grid>
                     <Grid item xs={6}>
-                        <TextValidator
+                        {/* <TextValidator
                             variant="outlined"
                             label="Mobile No."
                             name="mobile"
                             value={values.mobile}
                             placeholder="+91"
                             onChange={handleInputChange}
-                            validators={['required','isMobile']}
-                            errorMessages={['Please provide a valid E-mail']}
                             style={{width:'80%' ,margin:'8px'}}
-                            maxlength={12}
-                            minlength={12}
-                            />
+                            validators={['required','isNumber']}
+                            errorMessages={['Please provide a valid Number']}
+                            
+                            ></TextValidator> */}
+                            <MuiPhoneNumber 
+                                defaultCountry={'in'} 
+                                id="phoneNumber" 
+                                style={{marginLeft:'10px'}} 
+                                onChange={handleNumberChange} 
+                                value={values.mobile} 
+                                name="mobile"
+                                required={true}
+                                maxLength={12}
+                                minLength={12}
+                                />
                     </Grid>
                     <Grid item xs={6}>
                         <FormControl>
@@ -132,7 +159,7 @@ const form=props=>{
                     <Grid item xs={3}>
                     <br/>
                     <br/>
-                    <Button variant="contained" size="large" color="primary" type="submit">
+                    <Button variant="contained" size="large" color="primary" type="submit" onSubmit={phoneLengthChecker}>
                         Submit
                     </Button>
                     </Grid>
