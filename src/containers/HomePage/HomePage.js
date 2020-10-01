@@ -10,6 +10,7 @@ class HomePage extends React.Component {
           <Grid container style={{ justifyContent: "space-around" }}>
             <Card />
             <Card />
+            <Card />
           </Grid>
         </Paper>
       </div>
